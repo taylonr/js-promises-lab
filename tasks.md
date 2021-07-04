@@ -4,7 +4,7 @@
 
 3. The `getInvalidOrder` function needs to handle the case where the promise fails, instead of succeeding. Make a call to `http://localhost:8888/orders/0` and `catch` the error that comes back from the API. Make sure to return a `new Error()` from the function.
 
-4. The `setStatus` function needs to set the `status` variable to `done` when the call to `http://localhost:8888/orders/{id}` has completed, regardless of if it succeeded or failed. Make use of the `finally` function after the call.
+4. The `setStatus` function needs to set the `status` variable to `"done"` when the call to `http://localhost:8888/orders/{id}` has completed, regardless of if it succeeded or failed. Make use of the `finally` function after the call.
 
 5. Create a promise that resolves with a message of `"Hello"`.
 
