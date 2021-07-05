@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 const loadPartialMetadata = () => {
     let categories = axios.get("http://localhost:8888/itemCategories");
     let statuses = axios.get("http://localhost:8888/orderStatuses");
