@@ -2,7 +2,7 @@
 
 2. The `getAddressForOrder` function needs to get the order information for the specified `order` and then get the shipping `address` for that order and return it. To do this, use the successful completion of `http://localhost:8888/orders/1` to fetch the `/address` specified by the `shippingAddress` value, and then return that address.
 
-3. The `getInvalidOrder` function needs to handle the case where the promise fails, instead of succeeding. Make a call to `http://localhost:8888/orders/0` and `catch` the error that comes back from the API, and return it.
+3. The `getInvalidOrder` function needs to handle the case where the promise fails, instead of succeeding. Make a call to `http://localhost:8888/orders/-1` and `catch` the error that comes back from the API, and return it.
 
 4. The `setStatus` function needs to set the `status` variable to `"done"` when the call to `http://localhost:8888/orders/{id}` has completed, regardless of if it succeeded or failed. Make use of the `finally` function after the call.
 
