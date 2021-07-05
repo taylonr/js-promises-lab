@@ -1,0 +1,8 @@
+[Unit]
+Description=Mock API
+
+[Service]
+ExecStart=/usr/local/bin/json-server --port 8888 --host 0.0.0.0 --watch /home/nt-user/workspace/db.json
+
+[Install]
+WantedBy=multi-user.target
