@@ -1,3 +1,5 @@
+const http = require('http');
+
 const customPromise = (id) => {
     return new Promise((resolved, rejected) => {
         new http.get(`http://localhost:8888/orderStatuses/${id}`, (res) => {
