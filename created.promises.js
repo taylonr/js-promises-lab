@@ -1,16 +1,18 @@
-const resolvedPromise = () => {
-    return new Promise(resolve => {
-        resolve("Hello");
-    });
-};
-
-const rejectedPromise = () => {
-    return new Promise((resolve, reject) => {
-        reject("Failed");
+const customPromise = (id) => {
+    return new Promise((resolved, rejected) => {
+        new http.get(`http://localhost:8888/orderStatuses/${id}`, (res) => {
+            if(res.statusCode === 200){
+                res.on('data', (chunk) => {
+                    resolved(JSON.parse(chunk));
+                });
+            } else {
+                res.resume();
+                rejected(res.statusCode);
+            }       
+        });
     });
 };
 
 module.exports = {
-    rejectedPromise,
-    resolvedPromise,
+    customPromise,
 }
