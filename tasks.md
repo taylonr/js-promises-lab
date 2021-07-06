@@ -10,6 +10,6 @@
 
 1. The `setStatus` function needs to set the `status` variable to `"done"` when the call to `http://localhost:8888/orders/{id}` has completed, regardless of if it succeeded or failed. Make use of the `finally` function after the call.
 
-1. The `loadPartialMetadata` needs to make a make sure that it loads `itemCategories`, `orderStatuses`, and `userTypes`. However, for performance reasons, it does not want to do so sequentially. Use the `all` function of promises, and when it's successful, return a `concat`enated list of the results.
+1. The `loadPartialMetadata` needs to make sure that it loads `itemCategories`, `orderStatuses`, and `userTypes`. However, for performance reasons, it does not want to do so sequentially. Use the `all` function of promises, and when it's successful, return a `concat`enated list of the results.
 
 1. The `loadAllMetadata` function needs to handle the case where `addressTypes` fails while `itemCategories` and `orderStatuses` succeeds. Use the `allSettled` function of promises. When the call completes, return a list of the `status` property for each call.
