@@ -1,6 +1,7 @@
 const axios = require("axios");
 
 let status = "";
+const getStatus = () => status;
 
 const getOrders = () => {
     return axios.get('http://localhost:8888/orders')
@@ -43,6 +44,6 @@ module.exports = {
     getAddressForOrder,
     getInvalidOrder,
     getOrders,
-    setStatus,
-    status
+    getStatus,
+    setStatus
 }
