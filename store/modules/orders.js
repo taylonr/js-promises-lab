@@ -11,10 +11,12 @@ module.exports = {
     
         let metadata = {};
         
-        Promise.all()
-        .then(() => {
+        Promise.all([])
+        .then(([]) => {
+          return [];
         })
-        .then((orders) => {            
+        .then((orders) => {      
+          return [];      
         })
         .then(orders => {
           res.render('order', {orders: orders})
